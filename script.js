@@ -1,3 +1,6 @@
+
+function janken() {
+
 /*変数定義 ********/
 // じゃんけんの手の番号を決定
 
@@ -60,6 +63,8 @@ if (!hum) {
 } else {
   var com = getComHand();
   alert(getResultMsg(com, hum));
+}
+
 }
 
 
