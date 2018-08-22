@@ -58,25 +58,4 @@ function janken() {
     alert(getResultMsg(com, hum));
     return getResult(com, hum);
   };
- };
-
-/*
-
-  var win = 0;
-  var isLose = false;
-
-  while (!isLose) {
-    var result = janken();
-    if (result === '結果はあいこでした!') {
-      //alert('結果はあいこでした！');
-      continue;
-    }
-    if (result === '勝ちました！') {
-      win++;
-      alert('勝ちました！ただいま「' + win + '」勝中です。');
-      continue;
-    }
-    alert('負けました！連勝はストップです！記録は「' + win + '」勝でした！');
-    isLose = true;
-  };
-  */
+};
