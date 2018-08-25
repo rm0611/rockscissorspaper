@@ -1,0 +1,33 @@
+h1 {
+ font-size: 1.2em; 
+}
+
+button {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  font-family: "Work Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding: 8px 20px !important;
+}
+
+.btn.btn-sm {
+  padding: 4px 15px !important;
+}
+.btn.btn-md {
+  padding: 8px 20px !important;
+}
+.btn.btn-lg {
+  padding: 18px 36px !important;
+}
+button:hover, button:active, button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
