@@ -33,7 +33,7 @@ const janken = () => {
     };
   };
 
-  //Judge the result
+  //Get the result
   function getResult(com, hum) {
     if (hum === com) {
       return 'It was a draw!';
@@ -44,12 +44,12 @@ const janken = () => {
     };
   };
 
-  //Ultimate message
+  //Ultimate message 
   function getResultMsg(com, hum) {
     return getResult(com, hum) + 'The computer\'s hand was ' + getHandName(com) + ' !';
   };
 
-  //
+  //Alert the ultimate message
   var hum = getHumHand();
   if (!hum) {
     alert('Oops! You entered a wrong key. Please refresh the page and try again!');
@@ -58,4 +58,12 @@ const janken = () => {
     alert(getResultMsg(com, hum));
     return getResult(com, hum);
   };
+
+  //Print the result
+  var mydiv = document.getElementById("first-result");
+    mydiv.innerHTML = "h3タグに変更しました";
+
+ 
 };
+
+

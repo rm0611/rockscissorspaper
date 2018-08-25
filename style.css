@@ -25,15 +25,16 @@ button {
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   border-radius: 50px;
-  padding: 8px 20px !important;
+  padding: 8px 20px;
+  background-color: hsl(250, 40%, 30%);
 }
 
 
 button:hover {
   box-shadow: none !important;
   outline: none !important;
-  background-color: blue;
-  color: #534542;
+  background-color: hsl(330, 50%, 50%);
+  color: hsl(33, 80%, 50%);
 }
 
 section {
@@ -74,4 +75,16 @@ section {
   max-width: 30%;
   text-align: center;
   margin: 10px;
+}
+
+#first-result {
+
+}
+
+#second-result {
+
+}
+
+#third-result {
+  
 }
