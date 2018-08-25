@@ -1,58 +1,58 @@
 const janken = () => {
 
-  // じゃんけんの手の番号を決定
-  var GU = 1;
-  var CHOKI = 2;
-  var PA = 3;
+  // Decide what number corresponds to which hand
+  var ROCK = 1;
+  var SCISSORS = 2;
+  var PAPER = 3;
 
-  // 人間に手を入力してもらう機能
+  // Enter the user's hand
   function getHumHand() {
-    var hum = prompt('半角英数字の1〜3の数字で入力してください\n\n' + GU + ':グー\n' + CHOKI + ':チョキ\n' + PA + ':パー');
+    var hum = prompt('Please enter your hand from 1~3\n\n' + ROCK + ':rock\n' + SCISSORS + ':scissors\n' + PAPER + ':paper');
     hum = parseInt(hum, 10);
-    if (hum !== GU && hum !== CHOKI && hum !== PA) {
+    if (hum !== ROCK && hum !== SCISSORS && hum !== PAPER) {
       return undefined;
     } else {
       return hum;
     };
   };
 
-  //コンピューターの手を決める
+  //Decide the computer's hand
   function getComHand() {
     return Math.floor(Math.random() * 3) + 1;
   };
 
-  //コンピューターの手の名前を取得
+  //Get computer's hand name
   function getHandName(num) {
     switch (num) {
-      case GU:
-        return 'グー';
-      case CHOKI:
-        return 'チョキ';
-      case PA:
-        return 'パー';
+      case ROCK:
+        return 'rock';
+      case SCISSORS:
+        return 'scissors';
+      case PAPER:
+        return 'paper';
     };
   };
 
-  //結果の判定
+  //Judge the result
   function getResult(com, hum) {
     if (hum === com) {
-      return '結果はあいこでした！';
-    } else if ((com === GU && hum === PA || com === CHOKI && hum === GU || com === PA && hum === CHOKI)) {
-      return '勝ちました！';
+      return 'It was a draw!';
+    } else if ((com === ROCK && hum === PAPER || com === SCISSORS && hum === ROCK|| com === PAPER && hum === SCISSORS)) {
+      return 'You won!';
     } else {
-      return '負けました！';
+      return 'You lost!';
     };
   };
 
-  //最終的な結果のメッセージ
+  //Ultimate message
   function getResultMsg(com, hum) {
-    return getResult(com, hum) + 'コンピューターの出した手は「' + getHandName(com) + '」でした';
+    return getResult(com, hum) + 'The computer\'s hand was ' + getHandName(com) + ' !';
   };
 
-  /*実行処理**********/
+  //
   var hum = getHumHand();
   if (!hum) {
-    alert('入力値をうまく認識できませんでした。ブラウザを再読み込みすると、もう一度挑戦できます。');
+    alert('Oops! You entered a wrong key. Please refresh the page and try again!');
   } else {
     var com = getComHand();
     alert(getResultMsg(com, hum));
