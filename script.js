@@ -49,19 +49,20 @@ const janken = () => {
     return getResult(com, hum) + 'The computer\'s hand was ' + getHandName(com) + ' !';
   };
 
-  //Alert the ultimate message
+  //Alert the ultimate message and print the result to the box
   var hum = getHumHand();
   if (!hum) {
     alert('Oops! You entered a wrong key. Please refresh the page and try again!');
   } else {
     var com = getComHand();
     alert(getResultMsg(com, hum));
-    return getResult(com, hum);
-  };
 
-  //Print the result
-  var mydiv = document.getElementById("first-result");
-    mydiv.innerHTML = "h3タグに変更しました";
+    var result = document.getElementById('first-result');
+    result.innerHTML = getResult(com,hum);
+
+    return getResult(com, hum);     
+ 
+  };
 
  
 };
