@@ -1,9 +1,9 @@
 const janken = () => {
 
   // Decide what number corresponds to which hand
-  var ROCK = 1;
-  var SCISSORS = 2;
-  var PAPER = 3;
+  const ROCK = 1;
+  const SCISSORS = 2;
+  const PAPER = 3;
 
   // Enter the user's hand
   function getHumHand() {
