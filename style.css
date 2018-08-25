@@ -58,3 +58,20 @@ section {
   font-size: 20px;
   line-height: 1.5;
 }
+
+.solution-contents {
+  max-width: 700px;
+  display: flex;
+  justify-content: space-around;
+  -webkit-flex-flow: row wrap;
+  margin: 0 auto;
+}
+
+.solution-items {
+  background-color: orange;
+  height: 150px;
+  min-width: 150px;
+  max-width: 30%;
+  text-align: center;
+  margin: 10px;
+}
