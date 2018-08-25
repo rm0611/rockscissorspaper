@@ -1,4 +1,4 @@
-function janken() {
+const janken = () => {
 
   // じゃんけんの手の番号を決定
   var GU = 1;
