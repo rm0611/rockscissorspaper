@@ -37,7 +37,7 @@ const janken = () => {
   function getResult(com, hum) {
     if (hum === com) {
       return 'It was a draw!';
-    } else if ((com === ROCK && hum === PAPER || com === SCISSORS && hum === ROCK|| com === PAPER && hum === SCISSORS)) {
+    } else if ((com === ROCK && hum === PAPER || com === SCISSORS && hum === ROCK || com === PAPER && hum === SCISSORS)) {
       return 'You won!';
     } else {
       return 'You lost!';
@@ -58,13 +58,46 @@ const janken = () => {
     alert(getResultMsg(com, hum));
 
     var result = document.getElementById('first-result');
-    result.innerHTML = getResult(com,hum);
+    result.innerHTML = getResult(com, hum);
+    
+    var result2 = document.getElementById('second-result');
+    result2.innerHTML = '残念でした！';
+    
+    /*
+      if (getResult(com, hum) === '結果はあいこでした。') {
+        //continue;
+        var result2 = document.getElementById('second-result');
+        result2.innerHTML = '残念でした！';
+      } else {
+        result2.innerHTML = '次です！';
+      }*/
+    
+  /*
+    //ここから繰り返しのコード
+    var win = 0;
+    var isLose = false;
+    while (!isLose) {
+      if (getResult(com, hum) === '結果はあいこでした。') {
+        //continue;
+        var result2 = document.getElementById('second-result');
+        result2.innerHTML = '残念でした！';
+      }
+      
+      if (getResult(com, hum) === '勝ちました。') {
+        win++;
+        //alert('ただいま「' + win + '」勝です。');
+        //continue;
+      }
+      alert('連勝はストップです。記録は「' + win + '」勝でした。');
+      
+      isLose = true;
+    }*/
 
-    return getResult(com, hum);     
- 
+
+    return getResult(com, hum);
+
+
   };
 
- 
+
 };
-
-
